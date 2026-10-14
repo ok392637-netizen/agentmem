@@ -479,8 +479,8 @@ fs.writeFileSync(MODE, 'crash', 'utf8');
 resetCalls();
 autoWorker();
 const log17 = autoLog();
-// 「模型炸了」是桩自己写进 stderr 的原因。只看到「调用失败」不够 —— 10-08 15:53 那次 claude
-// 失败（登录后 17 分钟）就是只记了「Command failed + 命令行」，事后完全查不出为什么。
+// 「模型炸了」是桩自己写进 stderr 的原因。只看到「调用失败」不够 —— 曾有一次 claude
+// 失败就是只记了「Command failed + 命令行」，事后完全查不出为什么。
 ok('17 模型调用失败在 auto.log 里看得见（含原因）+ 本轮熔断',
   log17.includes('模型调用失败') && log17.includes('模型炸了') && /其中 1 次调用失败/.test(log17) && calls().length === 1,
   `失败进了 auto.log=${log17.includes('模型调用失败')}；模型自己说的原因也在=${log17.includes('模型炸了')}；`
