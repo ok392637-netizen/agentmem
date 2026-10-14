@@ -1,0 +1,7 @@
+{
+  "name": "agentmem-dsh-recall",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js"
+}

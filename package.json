@@ -1,0 +1,14 @@
+{
+  "name": "agentmem",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "五个 agent 共享的本地记忆：共享知识 + 撞车预警 + 归属。无服务器。",
+  "bin": {
+    "memo": "bin/memo.mjs"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.2.0",
+    "libsql": "^0.5.29"
+  }
+}
